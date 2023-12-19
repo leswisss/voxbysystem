@@ -1,0 +1,215 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 5.5rem;
+  --first-color: #315cf7;
+  --second-color: hsl(230, 97%, 31%);
+  --third-color: hsl(230, 100%, 79%);
+  --text-color-dark: hsla(0, 0%, 0%, 1);
+  --text-color-light: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 100%);
+  --grey-background: hsl(0, 0%, 87%);
+  --dark-transparency: hsla(0, 0%, 0%, 20%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Montserrat', sans-serif;
+
+  --biggest-font-size: 7rem;
+  --h1-font-size: 2.2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .905rem;
+  --smaller-font-size: .813rem;
+  --tiny-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 800;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /* Transition */
+  --transition: cubic-bezier(.08,.49,.82,.5);
+}
+
+/* Responsive typography */
+@media screen and (max-width: 1088px) {
+  :root {
+    --biggest-font-size: 5rem;
+    --h1-font-size: 1.7rem;
+    --h2-font-size: 1.3rem;
+    --h3-font-size: 1.1rem;
+    --normal-font-size: 0.95rem;
+    --small-font-size: 0.83rem;
+    --smaller-font-size: 0.76rem;
+    --tiny-font-size: 0.64rem;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 1.3rem;
+    --h2-font-size: 1.1rem;
+    --h3-font-size: 0.95rem;
+    --normal-font-size: .89rem;
+    --small-font-size: .80rem;
+    --smaller-font-size: 0.73rem;
+    --tiny-font-size: 0.58rem;
+  }
+}
+
+
+
+/*===================== BASE =====================*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-normal);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color-light);
+  transition: .4s; 
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  cursor: pointer;
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  width: max-content;
+  padding: 10px 20px;
+  background-color: var(--first-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 3rem 0 1rem;
+}
+
+.section__title{
+  font-size: var(--h3-font-size);
+  color: var(--text-color-dark);
+  line-height: 120%;
+  font-weight: var(--font-bold);
+}
+
+.section__subtitle{
+  font-size: var(--h1-font-size);
+  color: var(--second-color);
+  font-weight: var(--font-medium);
+}
+
+.logo__link{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
+  color: var(--text-color-light);
+}
+
+.logo__bold{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  color: var(--second-color)
+}
+
+.logo{
+  width: 6rem;
+  height: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+}
+
+.hero__text{
+  font-size: var(--normal-font-size);
+  line-height: 22px;
+}
+
+.normal__text{
+  font-size: var(--small-font-size);
+  line-height: 22px;
+}
+
+.tiny__text{
+  font-size: var(--tiny-font-size);
+}
+
+
+
+@media screen and (max-width: 1299px) {
+  .container {
+    margin: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .container {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .container {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1088px ) {
+  .section__subtitle{
+    font-size: 2rem;
+    color: var(--second-color);
+    font-weight: var(--font-medium);
+  }
+}
+
+@media screen and (max-width: 508px ) {
+  .section__subtitle{
+    font-size: 1.5rem;
+    color: var(--second-color);
+    font-weight: var(--font-medium);
+  }
+}
+

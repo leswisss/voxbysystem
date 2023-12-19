@@ -1,0 +1,123 @@
+.navbar{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-tooltip);
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.logo{
+  display: block;
+}
+
+.activeNavbar{
+  backdrop-filter: blur(30px);
+}
+
+.activeNavbarLinks{
+  color: var(--text-color-dark) !important;
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.nav__icon{
+  display: flex;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-line{
+  width:30px;
+  min-height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: 0.5s ease;
+  display: block;
+  right: 0;
+}
+
+.line-1{
+  transform: translateY(-5px);
+}
+
+.line-2{
+  transform: translateY(5px);
+}
+
+.activeLine1{
+  transform: translateY(0px) rotate(45deg);
+}
+
+.activeLine2{
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.changeLineColor{
+  background-color: black;
+}
+
+.nav__menu{
+  display: flex;
+  gap: 3rem;
+}
+
+.nav__link{
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+}
+
+.nav__link:hover{
+  transform: translateY(-7px);
+}
+
+.letter__o{
+  font-size: var(--h3-font-size);
+  color: var(--text-color-light)
+}
+
+
+/*==================== RESPONSIVE DESIGN ========================*/
+@media screen and (max-width: 850px) {
+  .nav__icon{
+    display: grid;
+  }
+
+  .nav__menu{
+    position: absolute;
+    top: 100%;
+    right: -400px;
+    background-color: hsla(227, 77%, 57%, 50%);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    padding: 100px;
+    align-items: center;
+    z-index: var(--z-tooltip);
+  }
+
+}
+
+
+@media screen and (max-width: 850px) {
+  .navbar .container{
+    margin: 0 1rem 0 0 !important;
+  }
+}

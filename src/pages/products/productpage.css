@@ -1,0 +1,374 @@
+.voxHero{
+  width: 100%;
+  height: 85vh;
+  background: url("../../assets/hero2.jpg");
+  background-size: cover;
+  background-position: 0 40%;
+  position: relative
+}
+
+.phero__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.phero__text-1,
+.phero__text-2{
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+}
+
+
+/*============== PRODUCT DISPLAY PAGE ===============*/
+.product__display{
+  width: 100%;
+}
+
+.display__navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: var(--text-color-dark);
+  margin-top: 1rem;
+}
+
+.navbar__links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.pnavbar__link{
+  font-size: var(--tiny-font-size);
+  text-transform: uppercase;
+  font-weight: var(--font-medium);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.activepbarLink{
+  background-color: var(--first-color);
+  color: var(--text-color-light);
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.searchbar{
+  width: 300px;
+  height: 2rem;
+  position: absolute;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 20px;
+  right: -100vh;
+}
+
+.searchbar input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  background-color: transparent;
+}
+
+.searchbar svg{
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--h3-font-size);
+  cursor: pointer;
+}
+
+.searchdisplay{
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  right: 0;
+  position: relative;
+}
+
+.search__text{
+  font-size: var(--tiny-font-size);
+  font-weight: var(--font-medium);
+}
+
+.display__content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  margin-bottom: 4rem;
+  min-height: 400px;
+}
+
+.display__card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 22%;
+  height: 400px;
+}
+
+.display__img{
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+}
+
+.display__desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 45%;
+  color: var(--text-color-dark);
+  padding: 15px 0 0;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+.display__header{
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  height: max-content;
+}
+
+.display__text{
+  height: max-content;
+  font-size: var(--small-font-size);
+  width: 98%;
+}
+
+.display__cta{
+  background-color: var(--third-color);
+  color: var(--text-color-light);
+  font-size: var(--smaller-font-size);
+  text-transform: uppercase;
+  font-weight: var(--font-medium);
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  margin-top: auto;
+  width: 100%;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.display__card:nth-child(1) .display__cta{
+  transform: translateY(0);
+}
+
+.display__card:hover .display__cta{
+  transform: translateY(0);
+}
+
+.pagination__container{
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.pagination{
+  width: max-content;
+  color: var(--text-color-light);
+  background-color: var(--first-color);
+  margin: 0 auto;
+  padding: 15px 40px;
+  font-size: var(--h2-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 50px;
+}
+
+.pagination span{
+  display: inline-flex;
+}
+
+.pagination svg{
+  cursor: pointer;
+}
+
+
+
+/*============== REPONSIVE DESIGN ===============*/
+@media screen and (max-width: 1200px) {
+  .display__card {
+    width: 24%;
+  }
+
+  .display__navbar {
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    gap: 1rem;
+  }
+
+  .navbar__links {
+    justify-content: space-between;
+    user-select: none;
+    width: 100%;
+  }
+
+  .search {
+    width: max-content;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .voxHero{
+    height: 80vh;
+  }
+
+  .display__card {
+    width: 32%;
+  }
+
+  .display__cta {
+    transform: translateY(0px);
+  }
+
+  .searchdisplay {
+    padding-right: 20px;
+  }
+
+}
+
+/* MOBILE DEVICES */
+@media screen and (max-width: 700px){
+  .voxHero{
+    height: 38rem;
+  }
+
+  .navbar__links {
+    white-space: nowrap;
+    user-select: none;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .navbar__links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar__links {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
+
+  .display__card {
+    width: 45%;
+    height: 350px;
+  }
+
+  .display__img {
+    height: 45%;
+    object-fit: fill;
+  }
+
+  .display__desc {
+    height: 55%;
+  }
+
+  .phero__text-1,
+  .phero__text-2{
+    font-size: calc(var(--biggest-font-size) - 0.2rem);
+    font-weight: var(--font-bold);
+  }
+
+  .display__content {
+    margin: 0 2rem 4rem;
+    width: calc(100% - 4rem)
+ }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .display__content {
+    margin: 0 0rem 4rem;
+    width: 100%;
+ }
+}
+
+
+@media screen and (max-width: 500px) {
+  .display__card {
+    width: 49%;
+    height: 350px;
+  }
+
+  .display__content {
+    margin: 0 -0.5rem 4rem;
+    width: calc(100% + 1rem)
+ }
+
+  .display__img {
+    height: 45%;
+    object-fit: fill;
+  }
+
+  .display__desc {
+    height: 55%;
+  }
+
+}
+
+
+@media screen and (max-width: 358px){
+  .display__card {
+    width: 70%;
+  }
+
+  .display__img {
+    height: 45%;
+    object-fit: fill;
+  }
+
+  .display__desc {
+    height: 55%;
+  }
+
+  .display__content{
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .phero__text-1,
+  .phero__text-2{
+    font-size: calc(var(--biggest-font-size) - 0.7rem);
+    font-weight: var(--font-bold);
+  }
+}

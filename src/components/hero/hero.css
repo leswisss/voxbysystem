@@ -1,0 +1,128 @@
+.hero{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/hero1.jpg");
+  background-size: cover;
+  padding: 8.5rem 0 0rem !important;
+}
+
+.hero__container{
+  height: 100%;
+  position: relative;
+}
+
+.hero__intro{
+  width: 600px;
+  height: auto;
+  background-color: var(--dark-transparency);
+  backdrop-filter: blur(3px);
+  padding: 20px 30px 25px;
+  display: grid;
+  gap: 20px;
+  position: absolute;
+  top: 10%;
+  left: 0;
+}
+
+.hero__header .logo__bold{
+  color: var(--text-color-light);
+}
+
+.hero__header{
+  white-space: pre-wrap;
+}
+
+.hero__button{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.5s ease;
+}
+
+.hero__button:hover{
+  background-color: var(--second-color);
+  scale: 0.96;
+}
+
+.hero__cta{
+  height: 5.5rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.hero__cta-container{
+  width: 15rem;
+  height: 100%;
+  display: grid;
+  justify-content: space-between;
+  padding: 7px 10px;
+  background-color: var(--body-color);
+}
+
+.cta__text{
+  color: var(--text-color-dark) !important;
+}
+
+.cta__button{
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px
+}
+
+.cta__button svg{
+  transition: all 0.4s ease;
+  transform: translateY(1px);
+}
+
+.cta__button:hover svg{
+  transform: translate(5px, 1px);
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 950px) {
+  .hero{
+    height: 85vh;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .hero{
+    height: 90vh;
+  }
+
+  .hero__intro {
+    width: 100%;
+    padding: 20px 10px;
+    gap: 20px;
+    top: 10%;
+    left: 0;
+  }
+
+  .hero__cta {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .hero{
+    height: 100vh;
+  }
+}
+
+
+@media screen and (max-width: 338px) {
+  .hero__cta {
+    width: 110%;
+  }
+}
